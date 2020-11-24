@@ -11,7 +11,7 @@
             "email": "devjpe@gmail.com"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "require": {
         "devpremium/login-steam-php": "dev-master",
         "php": ">=7.0"
