@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "steamLogin": "src/"
+            "steamLogin\\": "src/"
         },
         "files": [
             "src/steamAuth.php"
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "steamLogin": "src/"
+            "steamLogin\\": "src/"
         },
         "files": [
             "src/steamAuth.php"
