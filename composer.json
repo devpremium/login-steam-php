@@ -3,6 +3,7 @@
     "description": "PHP Steam login",
     "keywords": ["steam"],
     "license": "MIT",
+    "version": "dev-master",
     "authors": [
         {
             "name": "Joao Pedro",
@@ -11,7 +12,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Dvp\\SteamLogin": "src/"
+            "steamAuth\\login\\": "src/"
         }
     },
     "require": {},
