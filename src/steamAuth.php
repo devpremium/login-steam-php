@@ -1,5 +1,5 @@
 <?php
-namespace steamAuth;
+namespace steamLogin;
 
 class steamAuth extends LightOpenID
 {
