@@ -3,6 +3,7 @@
     "description": "Login steam lib",
     "type": "library",
     "version": "1.0.0",
+    "minimum-stability": "stable",
     "license": [
         "MIT"
     ],
