@@ -2,8 +2,7 @@
     "name": "devpremium/login-steam-php",
     "description": "Login steam lib",
     "type": "library",
-    "version": "1.0.2",
-    "minimum-stability": "stable",
+    "version": "v2.0.0-p1",
     "license": [
         "MIT"
     ],
