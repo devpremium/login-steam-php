@@ -2,7 +2,7 @@
     "name": "devpremium/login-steam-php",
     "description": "Login steam lib",
     "type": "library",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "minimum-stability": "stable",
     "license": [
         "MIT"
@@ -17,7 +17,7 @@
         "php": ">=7.0"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "steamAuth\\": "src/login-steam/"
         }
     }
