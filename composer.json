@@ -2,6 +2,7 @@
     "name": "devpremium/login-steam-php",
     "description": "Login steam lib",
     "type": "library",
+    "version": "1.0.0",
     "license": [
         "MIT"
     ],
@@ -11,9 +12,7 @@
             "email": "devjpe@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "devpremium/login-steam-php": "dev-master",
         "php": ">=7.0"
     },
     "autoload": {
