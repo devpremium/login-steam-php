@@ -2,7 +2,9 @@
     "name": "devpremium/login-steam-php",
     "description": "Login steam lib",
     "type": "library",
-    "license": "MIT License",
+    "license": [
+        "MIT"
+    ],
     "authors": [
         {
             "name": "Joao Pedro",
