@@ -2,9 +2,6 @@
     "name": "devpremium/login-steam-php",
     "description": "PHP Steam login",
     "keywords": ["steam"],
-    "require": {
-        "php": ">=7.0"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -16,5 +13,7 @@
         "psr-0": {
             "Dvp\\SteamLogin": "src/"
         }
-    }
+    },
+    "require": {},
+    "minimum-stability": "dev"
 }
