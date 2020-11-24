@@ -1,24 +1,20 @@
 {
     "name": "devpremium/login-steam-php",
-    "description": "Login steam lib",
-    "type": "library",
-    "version": "1.0.0",
-    "minimum-stability": "stable",
-    "license": [
-        "MIT"
-    ],
+    "description": "PHP Steam login",
+    "keywords": ["steam"],
+    "require": {
+        "php": ">=7.0"
+    },
+    "license": "MIT",
     "authors": [
         {
             "name": "Joao Pedro",
             "email": "devjpe@gmail.com"
         }
     ],
-    "require": {
-        "php": ">=7.0"
-    },
     "autoload": {
-        "psr-4": {
-            "steamAuth\\": "src/login-steam/"
+        "psr-0": {
+            "Dvp\\SteamLogin": "src/"
         }
     }
 }
