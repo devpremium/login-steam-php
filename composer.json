@@ -10,11 +10,14 @@
             "email": "devjpe@gmail.com"
         }
     ],
+<<<<<<< Updated upstream
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.1-dev"
         }
     },
+=======
+>>>>>>> Stashed changes
     "require": {
         "php": "^7.2 || ^8"
     },
