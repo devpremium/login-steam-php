@@ -3,21 +3,13 @@
     "description": "PHP Steam login",
     "keywords": ["steam"],
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "authors": [
         {
             "name": "Joao Pedro",
             "email": "devjpe@gmail.com"
         }
     ],
-<<<<<<< Updated upstream
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.1-dev"
-        }
-    },
-=======
->>>>>>> Stashed changes
     "require": {
         "php": "^7.2 || ^8"
     },
