@@ -3,7 +3,7 @@
     "description": "PHP Steam login",
     "keywords": ["steam"],
     "license": "MIT",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "authors": [
         {
             "name": "Joao Pedro",

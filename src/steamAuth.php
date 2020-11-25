@@ -1,39 +1,40 @@
 <?php
+
 namespace steamLogin;
 
 use ErrorException;
 
 class steamAuth extends LightOpenID
 {
-    public static function login($steamauth)
+    public static function getUrlLogin(array $steamauth)
     {
-		try {
-			$openid = new LightOpenID($steamauth['domainname']);
-			 
-			if(!$openid->mode) {
-				$openid->identity = 'https://steamcommunity.com/openid';
-                return $openid->authUrl();
-			}elseif ($openid->mode == 'cancel') {
-				return 'User has canceled authentication!';
-			}else{
-				if($openid->validate()) {
-					$id = $openid->identity;
-					$ptn = "/^https?:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
-					preg_match($ptn, $id, $matches);
-					
-					$url = file_get_contents("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=".
-						$steamauth['apikey'].
-						"&steamids=".$matches[1]
-					);
+        $openid = new LightOpenID($steamauth['domainname']);
+        $openid->identity = 'https://steamcommunity.com/openid';
+        return $openid->authUrl();
+    }
 
-					return json_decode($url)->response->players[0];
-                }else{
-                    return 'OpenID Error';
-                }
-			}
-		}catch(ErrorException $e) {
-			return $e->getMessage();
-		}
+    public static function getLoginData(array $steamauth)
+    {
+        $openid = new LightOpenID($steamauth['domainname']);
+        $openid->identity = 'https://steamcommunity.com/openid';
+
+        if ($openid->mode == 'cancel') {
+            return false;
+        } else {
+            if ($openid->validate()) {
+                $id = $openid->identity;
+                $ptn = "/^https?:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+                preg_match($ptn, $id, $matches);
+
+                $url = file_get_contents("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=" .
+                    $steamauth['apikey'] .
+                    "&steamids=" . $matches[1]);
+
+                return json_decode($url)->response->players[0];
+            } else {
+                return false;
+            }
+        }
     }
 }
 
