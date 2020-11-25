@@ -8,14 +8,14 @@ class steamAuth extends LightOpenID
 {
     public static function getUrlLogin(array $steamauth)
     {
-        $openid = new LightOpenID($steamauth['domainname']);
+        $openid = new LightOpenID($steamauth['domainname'], $steamauth['loginpage']);
         $openid->identity = 'https://steamcommunity.com/openid';
         return $openid->authUrl();
     }
 
     public static function getLoginData(array $steamauth)
     {
-        $openid = new LightOpenID($steamauth['domainname']);
+        $openid = new LightOpenID($steamauth['domainname'], $steamauth['loginpage']);
         $openid->identity = 'https://steamcommunity.com/openid';
 
         if ($openid->mode == 'cancel') {
@@ -56,13 +56,13 @@ class LightOpenID
         'pref/timezone'           => 'timezone',
     );
 
-    function __construct($host, $proxy = null)
+    function __construct($host, $loginpage, $proxy = null)
     {
         $this->set_realm($host);
         $this->set_proxy($proxy);
 
         $uri = rtrim(preg_replace('#((?<=\?)|&)openid\.[^&]+#', '', $_SERVER['REQUEST_URI']), '?');
-        $this->returnUrl = $this->trustRoot . $uri;
+        $this->returnUrl = $loginpage;
 
         $this->data = ($_SERVER['REQUEST_METHOD'] === 'POST') ? $_POST : $_GET;
 
